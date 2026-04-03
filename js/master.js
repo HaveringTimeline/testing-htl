@@ -664,3 +664,55 @@ document.addEventListener('DOMContentLoaded', () => {
   window.showImagesForSelection = showImagesForSelection;
 });
 }); // end DOMContentLoaded
+
+// 3rd April - Android scroll fixes
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.getElementById("autoTimelineTrack");
+  const btnUp = document.getElementById("scrollUp");
+  const btnDown = document.getElementById("scrollDown");
+
+  let scrollInterval;
+
+  function startScroll(direction) {
+    stopScroll(); // safety
+    scrollInterval = setInterval(() => {
+      track.scrollTop += direction * 2; // adjust speed if needed
+    }, 10);
+  }
+
+  function stopScroll() {
+    clearInterval(scrollInterval);
+  }
+
+  // =========================
+  // DESKTOP (existing behaviour)
+  // =========================
+  btnUp.addEventListener("mousedown", () => startScroll(-1));
+  btnDown.addEventListener("mousedown", () => startScroll(1));
+
+  document.addEventListener("mouseup", stopScroll);
+
+  // =========================
+  // MOBILE FIX (2026-04-03)
+  // Add touch support
+  // =========================
+  btnUp.addEventListener("touchstart", (e) => {
+    e.preventDefault(); // 2026-04-03 prevent accidental clicks
+    startScroll(-1);
+  });
+
+  btnDown.addEventListener("touchstart", (e) => {
+    e.preventDefault(); // 2026-04-03
+    startScroll(1);
+  });
+
+  document.addEventListener("touchend", stopScroll);
+
+  // =========================
+  // MODERN FIX (2026-04-03)
+  // Pointer events (covers mouse + touch + pen)
+  // =========================
+  btnUp.addEventListener("pointerdown", () => startScroll(-1)); // 2026-04-03
+  btnDown.addEventListener("pointerdown", () => startScroll(1)); // 2026-04-03
+  document.addEventListener("pointerup", stopScroll); // 2026-04-03
+});
