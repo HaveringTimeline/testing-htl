@@ -1,7 +1,20 @@
 /* =========================================================
    SEARCH PAGE - KIOSK FRIENDLY VERSION
    ========================================================= */
+html, body {
+  height: auto !important;
+  min-height: 100vh;
+}
 
+.search-page .search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  /* CRITICAL FIX */
+  height: auto;
+  min-height: 100%;
+}
 /* Dropdown menu */
 .match-dropdown {
   margin: 12px 0;
