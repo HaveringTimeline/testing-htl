@@ -1,38 +1,74 @@
 .indexpage {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  display: flex;
-  background-image: url("/images/parchment.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #f8f2e7 0%, #f1eee8 100%);
   width: 100%;
-  overflow: visible;
-  height: auto;
+  min-height: 100vh;
+  padding-bottom: 4rem;
 }
 
-p {
-  color:#7f1629;
-  font-size: 20px;
+.indexpage .container {
+  margin-top: 110px;
+  display: block;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(36, 46, 61, 0.08);
+  box-shadow: 0 18px 45px rgba(27, 27, 34, 0.08);
 }
 
-h2 {
-  font-size: 35px !important;
+.indexpage p,
+.indexpage li,
+.indexpage a {
+  color: #2b3340;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.indexpage h1 {
+  font-size: clamp(2.2rem, 3vw, 3rem) !important;
   color: #7f1629 !important;
-  font-weight: 500 !important;
-  text-align: center;
+  font-weight: 700 !important;
+  margin-bottom: 0.75rem;
+}
+
+.indexpage h2 {
+  font-size: clamp(1.8rem, 2.3vw, 2.5rem) !important;
+  color: #7f1629 !important;
+  font-weight: 700 !important;
+  text-align: left;
+  text-decoration: none;
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
+}
+
+.indexpage h3 {
+  font-size: 1.5rem !important;
+  color: #7f1629 !important;
+  font-weight: 700 !important;
+  text-decoration: none;
+}
+
+.indexpage h4 {
+  font-size: 1.2rem !important;
+  color: #7f1629 !important;
+  font-weight: 700 !important;
+}
+
+.indexpage .container > p,
+.indexpage .container > li,
+.indexpage .container > div {
+  max-width: 100%;
+}
+
+.indexpage strong,
+.indexpage b {
+  color: #7f1629;
+}
+
+.indexpage a {
+  color: #0d5b92;
+  text-decoration: none;
+}
+
+.indexpage a:hover {
   text-decoration: underline;
-}
-
-h3 {
-  font-size: 35x !important;
-  color: #7f1629 !important;
-  font-weight: 500 !important;
-  text-decoration: underline;
-}
-
-h4 {
-  font-size: 25px !important;
-  color: #7f1629 !important;
-
 }

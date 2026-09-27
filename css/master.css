@@ -1,21 +1,44 @@
+:root {
+  --brand-red: #7f1629;
+  --brand-red-deep: #4d0d18;
+  --brand-gold: #c9a66b;
+  --brand-gold-deep: #a77b3a;
+  --brand-cream: #f7f2e8;
+  --museum-navy: #1d2430;
+  --museum-ink: #1d1c1a;
+  --panel: #fffdf9;
+  --panel-soft: #f3efe7;
+  --text: #1f2430;
+  --muted: #58616d;
+  --line: rgba(31, 42, 55, 0.12);
+  --shadow-soft: 0 18px 45px rgba(27, 27, 34, 0.08);
+  --shadow-card: 0 20px 50px rgba(29, 36, 48, 0.08);
+}
+
 /* =========================================================
   GLOBAL LAYOUT
    ========================================================= */
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-/* background-image: url("/images/parchment.jpg");  --- Will change colour of search.html background*/
-  /* overrides earlier background-color */
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #fbde81 !important;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(201, 166, 107, 0.18), transparent 30%),
+    linear-gradient(180deg, #f8f2e7 0%, #f1efe9 26%, #efe9df 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
-  margin-top: 100px;
-  /* drops text below nav bar on all pages */
+  margin-top: 110px;
   z-index: 9;
+  max-width: 1180px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(29, 36, 48, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  padding: 2rem 2rem 3rem;
+  backdrop-filter: blur(2px);
 }
 
 /* .accordion-body p consolidated later with font-weight; see the "Global accordion-body style" block below. */
@@ -25,16 +48,17 @@ body {
 
 /* Romhm text styles */
 .romhm-text {
-  font-size: 1rem;
-  color: #ec0909;
-  margin: 8px 0;
-  padding: 6px 10px;
-  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--brand-red);
+  margin: 1rem 0 1.2rem;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, rgba(127, 22, 41, 0.08), rgba(201, 166, 107, 0.12));
+  border-left: 4px solid var(--brand-gold-deep);
+  border-radius: 10px;
   align-content: center;
-  /* background: #f0dd0a; 
-  border-left: 3px solid #ddd;
-  border-radius: 2px;
-  height: 35px; */
 }
 
 /* No data message styles */
@@ -51,10 +75,10 @@ body {
 
 /* Copyright message styles */
 .copyright-text {
-  font-size: 0.85rem;
-  color: #1b0909;
-  margin-top: 12px;
-  font-weight: 800;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  font-weight: 700;
   text-align: center;
   font-style: italic;
 }
@@ -91,31 +115,30 @@ figcaption {
 
 /* Link container styles */
 .link-container {
-  margin: 16px 0;
-  padding: 12px;
-  /* background: #f9f9f9; */
-  border: 1px solid #e0e0e0;
-  border-radius: 9px;
+  margin: 1.2rem 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(127, 22, 41, 0.12);
+  border-left: 4px solid var(--brand-gold-deep);
+  border-radius: 14px;
   width: fit-content;
-
+  max-width: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(247,242,232,0.7));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
 }
 
 .link-container a {
   display: block;
-  margin: 8px 0;
-  color: #0b61a4; /* More imformation ... text colour */
+  margin: 0.5rem 0;
+  color: #0d5b92;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
+  font-weight: 600;
   word-break: break-word;
- text-decoration: none;					   
 }
 
 .link-container a:hover {
+  color: var(--brand-red);
   text-decoration: underline;
-  color: #084a84;
-  text-decoration: none; /* No underline on short history links*/
-   color: #1368a8; /* Same color text as link-container on short history links*/
-}
 															 
 /* Image row and column styles */
 .image-row {
@@ -149,10 +172,10 @@ figcaption {
   left: 0;
   height: 100vh;
   width: 250px;
-  background: #fbde81;
-  color: #7f1629;
-  padding: 75px 5px 0;
-  /* Drops side bar 75px down so it's not hidden by nav bar */
+  background: linear-gradient(180deg, #f7f0df 0%, #efe8d8 100%);
+  color: var(--brand-red);
+  padding: 75px 12px 32px;
+  border-right: 1px solid rgba(127, 22, 41, 0.12);
   overflow-y: auto;
   scrollbar-width: none;
 }
@@ -173,11 +196,11 @@ figcaption {
 
 /* Global accordion-button look */
 .accordion-button {
-  color: #7f1629 !important;
-  /*Text colour for accordion*/
-  font-weight: 500;
-  background-color: #fbde81 !important;
-  /*Background colour for accordion*/
+  color: var(--brand-red) !important;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.42) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
@@ -231,51 +254,51 @@ figcaption {
    ========================================================= */
 
 .sidebar .accordion-button {
-  background: #7f1629 !important;
-  color: #fbde81 !important;
+  background: linear-gradient(90deg, var(--museum-navy) 0%, #303c4d 100%) !important;
+  color: #f8f4ef !important;
+  border-radius: 12px !important;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 .sidebar .accordion-button:hover {
-  background: #fbde81 !important;
-  color: #7f1629 !important;
-  border-radius: 10px;
-  /* font-weight: 500; */
-  /* box-shadow: none; */
+  background: linear-gradient(90deg, #f5ebcc 0%, #fffaf0 100%) !important;
+  color: var(--brand-red) !important;
+  border-radius: 12px;
 }
 
 .sidebar .accordion-button:not(.collapsed) {
-  background: #fbde81 !important;
-  /*Years range  background when open*/
-  color: #7f1629 !important;
-  /*Years range text when open*/
+  background: linear-gradient(90deg, #f6e7b6 0%, #f9f5ee 100%) !important;
+  color: var(--brand-red) !important;
 }
 
 .sidebar .accordion-body {
-  background: #fbde81 !important;
-  /*Year and title background when open*/
-  padding: 0;
+  background: rgba(255, 255, 255, 0.22) !important;
+  padding: 0.45rem 0.55rem 0.8rem;
 }
 
 /* =========================================================
    SIDEBAR LINKS
    ========================================================= */
 .sidebar .nav-link {
-  padding: 8px 20px;
-  color: #fbde81;
-  /*Year & Title text */
-  transition: background 0.3s;
-  font-size: 15px !important;
-  /* nav-link only on side-bar */
-  font-weight: 500;
+  padding: 0.7rem 0.9rem;
+  color: var(--brand-red);
+  transition: all 0.2s ease;
+  font-size: 0.92rem !important;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 0.18rem 0;
+  display: block;
+  border: 1px solid transparent;
 }
 
 .sidebar .nav-link:hover {
-  background: #fbde81;
-  color: #7f1629 ;
+  background: linear-gradient(90deg, rgba(127, 22, 41, 0.06), rgba(201, 166, 107, 0.08));
+  color: var(--brand-red-deep);
+  border-color: rgba(127, 22, 41, 0.08);
   border-radius: 10px;
-  font-weight: 500;
-  /*  font-size: 15px !important;
-  nav-link only on side-bar */
+  font-weight: 700;
 }
 
 .sidebar i {
@@ -289,15 +312,11 @@ figcaption {
   margin-left: 250px;
   flex: 1;
   display: flex;
-  /*2 lines belowadded 18th March to put images in a row*/
   flex-direction: column;
   align-items: stretch;
-
   justify-content: center;
   align-items: center;
-  background: #fbde81;
-
-  /* overflow: hidden; */
+  background: transparent;
 }
 
 /* =========================================================
@@ -307,10 +326,9 @@ figcaption {
   position: relative;
   width: 100%;
   height: 80%;
-  background: #fbde81;
+  background: transparent;
   border-radius: 20px;
   overflow: hidden;
-  /* box-shadow: #74af37; */
 }
 
 #autoTimelineTrack {
@@ -335,31 +353,55 @@ figcaption {
 
 .card {
   width: 85%;
-  border-radius: 25px;
-  box-shadow: 6px -6px 15px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(127, 22, 41, 0.12);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
   overflow: hidden;
   margin: 0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(247,242,232,0.9));
+  position: relative;
+  isolation: isolate;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--brand-red) 0%, var(--brand-gold) 48%, var(--brand-red) 100%);
+  z-index: 1;
 }
 
 .card-body {
-  background: #fbde81;
-Background for card body used for People and Places accordion text.
-  padding: 1rem;
-  border-radius: 8px;
- }
+  background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(245,239,229,0.7));
+  padding: 1.8rem 1.5rem 1.6rem;
+  border-radius: 0 0 28px 28px;
+  position: relative;
+  z-index: 2;
+}
 
 .timeline-h1 {
-  color: #7f1629;
-  font-size: 2rem;
+  color: var(--brand-red);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .timeline-p {
-  color: #7f1629;
-  font-size: 1.1rem;
+  color: var(--museum-ink);
+  font-size: 1.06rem;
+  line-height: 1.8;
   text-align: justify;
-  padding: 0 1rem;
+  padding: 0 0.9rem;
+}
+
+.timeline-p:first-letter {
+  font-weight: 700;
+  color: var(--brand-red);
 }
 
 
@@ -367,10 +409,14 @@ Background for card body used for People and Places accordion text.
    LINK CONTAINER
    ========================================================= */
 .link-container::before {
-  color: black;
-  content: "More information at ......\00a0";
-  font-weight: 600;
- 
+  color: var(--brand-red);
+  content: "Further reading\00a0";
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  display: block;
+  margin-bottom: 0.4rem;
 }
 
 /* =========================================================
@@ -378,28 +424,28 @@ Background for card body used for People and Places accordion text.
    ========================================================= */
 .scroll-arrow {
   position: absolute;
-  right: 10px;
-  width: 40px;
-  height: 40px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
   border: none;
-  background: #7f1629;
-  color: #fbde81;
-  font-size: 24px;
+  background: linear-gradient(135deg, var(--brand-red) 0%, #8d1b2f 100%);
+  color: #f9f2e6;
+  font-size: 22px;
   cursor: pointer;
-  z-index: 1000; /* Leave in, if removed scroll arrows don't work */
+  z-index: 1000;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  box-shadow: 0 12px 22px rgba(127, 22, 41, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .scroll-arrow:hover {
-  background: #fbde81;
-  color: #7f1629;
-  transform: scale(1.1);
+  background: linear-gradient(135deg, #f5e9c2 0%, #fffaf3 100%);
+  color: var(--brand-red);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 16px 26px rgba(127, 22, 41, 0.18);
 }
 
 #scrollUp {
@@ -415,62 +461,65 @@ Background for card body used for People and Places accordion text.
 /*Nav-bar only */
 
 .navpage .navbar {
-  background: #fbde81;
-  color: #7f1629;
+  background: linear-gradient(90deg, #1f2430 0%, #2f3b4a 100%);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(19, 23, 30, 0.12);
 }
 
 /* Nav links */
 .nav-link {
-  color: #fbde81;
-  font-size: 25px;
-  font-weight: 400;
-  background-color: #7f1629;
-  margin-right: 10px;
-  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: transparent;
+  margin-right: 0.35rem;
+  border-radius: 999px;
   justify-content: center;
+  padding: 0.55rem 0.9rem !important;
+  transition: all 0.2s ease;
 }
 
 .nav-link:hover {
-   font-size: 25px;
-  background: #fbde81; !important;
-  color: #7f1629;!important;
-  font-weight: 400;
+  background: rgba(201, 166, 107, 0.18) !important;
+  color: #f9f3ea !important;
+  font-weight: 600;
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 999px;
 }
 
 /* Page background + font styling */
 .navpage .nav-link {
-  background-color: #fbde81;
-  font-size: 25px;
+  background-color: transparent;
+  font-size: 1rem;
 }
 
 /* navbar brand style */
 .navbar-brand {
-  color: #fbde81;
-  background-color: #7f1629;
-  font-size: 25px;
+  color: #f7efe4;
+  background: linear-gradient(90deg, var(--brand-red) 0%, #8c1e31 100%);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   display: flex;
   align-items: center;
-  /* vertical centering */
   height: 100%;
-  /* match navbar height */
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
 }
 
 .navbar-brand:hover {
-  color: #7f1629;
-  background-color: #fbde81;;
-  font-size: 25px;
+  color: #fff9f5;
+  background: linear-gradient(90deg, #8c1e31 0%, var(--brand-red) 100%);
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
-  /* vertical centering */
   height: 100%;
-  /* match navbar height */
 }
 
 .navbar-nav {
-  padding-left: 100px;
-  /*Moves top menu to right, more central*/
+  padding-left: 1rem;
+  gap: 0.15rem;
 }
 
 
