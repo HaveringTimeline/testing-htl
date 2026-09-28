@@ -757,12 +757,12 @@ a:hover {
 }
 
 .navbar-brand {
-  background: linear-gradient(90deg, #087eaa 0%, #13aebe 100%);
+  background: linear-gradient(90deg, #1455e8 0%, #f2bb06 100%);
   color: #fff;
 }
 
 .navbar-brand:hover {
-  background: linear-gradient(90deg, #13aebe 0%, #087eaa 100%);
+  background: linear-gradient(90deg, #f2bb06 0%, #087eaa 100%);
   color: #fff;
 }
 
