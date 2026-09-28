@@ -220,7 +220,7 @@ figcaption {
   }
   /* Sidebar accordion arrows */
   .sidebar .accordion-button::before {
-    color: #7f1629;
+    color: #16227f;
   }
 
   /* Arrow rotates when open but not needed now, arrow changes colour on hover -
