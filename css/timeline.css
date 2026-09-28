@@ -285,6 +285,14 @@
     0 16px 28px rgba(45, 38, 67, 0.2);
 }
 
+.timeline-page #scrollUp {
+  top: 30%;
+}
+
+.timeline-page #scrollDown {
+  bottom: 30%;
+}
+
 .timeline-page #pauseIcon {
   color: var(--timeline-blue) !important;
   filter: drop-shadow(0 2px 0 #fff);
