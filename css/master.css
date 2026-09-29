@@ -2,42 +2,40 @@
   --brand-blue: #1455e8;
   --brand-blue-deep: #123db8;
   --brand-cyan: #13c8d5;
-  --brand-ocean: #087eaa;
+  --brand-ocean: #087ecb;
   --panel-soft: #eaf2ff;
   --text: #172640;
   --muted: #53657d;
   --line: rgba(20, 85, 232, 0.16);
   --shadow-soft: 0 18px 45px rgba(18, 61, 184, 0.1);
   --shadow-card: 0 20px 50px rgba(18, 61, 184, 0.12);
-  --color-white: #fff;
-  --color-f7faff: #f7faff;
-  --color-8bb5ff: #8bb5ff;
-  --color-ddd: #ddd;
-  --color-0d5b92: #0d5b92;
-  --color-1766f4: #1766f4;
-  --color-16227f: #16227f;
-  --color-303c4d: #303c4d;
-  --color-f8f4ef: #f8f4ef;
-  --color-00aebd: #00aebd;
-  --color-dceaff: #dceaff;
-  --color-b9e9f5: #b9e9f5;
-  --color-f7efe4: #f7efe4;
-  --color-13aebe: #13aebe;
-  --color-fff9f5: #fff9f5;
-  --color-edf5ff: #edf5ff;
-  --color-f2f7ff: #f2f7ff;
-  --color-f2bb06: #f2bb06;
-  --color-a8e8f3: #a8e8f3;
-  --color-103ba9: #103ba9;
   --color-087ecb: #087ecb;
-  --color-f8fbff: #f8fbff;
+  --color-0d5b92: #0d5b92;
+  --color-104bbd: #104bbd; /*.timeline-page .link-container a */
+  --color-13aebe: #13aebe;
+  --color-16227f: #16227f;
+  --color-1766f4: #1766f4;
   --color-201c30: #201c30;
-  --color-fffef9: #fffef9;
-  --color-52c4e8: #52c4e8;
   --color-283449: #283449;
-  --color-e9fbff: #e9fbff;
-  --color-104bbd: #104bbd;
+  --color-303c4d: #303c4d;
+  --color-52c4e8: #52c4e8;
+  --color-8bb5ff: #8bb5ff;
   --color-8bdcf0: #8bdcf0;
+  --color-a8e8f3: #a8e8f3;
+  --color-b9e9f5: #b9e9f5;
+  --color-dceaff: #dceaff;
+  --color-ddd: #ddd;
+  --color-e9fbff: #e9fbff;
+  --color-edf5ff: #edf5ff;
+  --color-f2bb06: #f2bb06;
+  --color-f2f7ff: #f2f7ff;
+  --color-f7efe4: #f7efe4;
+  --color-f7faff: #f7faff;
+  --color-f8f4ef: #f8f4ef;
+  --color-f8fbff: #f8fbff;
+  --color-fff9f5: #fff9f5;
+  --color-fffef9: #fffef9;
+  --color-white: #fff;
 }
 
 /* =========================================================
@@ -649,7 +647,7 @@ body {
     160deg,
     var(--color-1766f4) 0%,
     var(--brand-blue-deep) 100%
-  );
+  );a8e8f3
   color: var(--color-white);
   border-right: 4px solid var(--brand-cyan);
 }
@@ -657,8 +655,8 @@ body {
 .sidebar .accordion-button {
   background: linear-gradient(
     110deg,
-    var(--color-103ba9),
-    var(--color-087ecb)
+    var(--color-#104bbd),
+    var(--color-#087ecb)
   ) !important;
   color: var(--color-white) !important;
 }
