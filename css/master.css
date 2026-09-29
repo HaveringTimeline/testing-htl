@@ -2,34 +2,12 @@
   --brand-blue: #1455e8;
   --brand-blue-deep: #123db8;
   --brand-cyan: #13c8d5;
-  --brand-ocean: #087ecb;
   --panel-soft: #eaf2ff;
   --text: #172640;
-  --muted: #53657d;
+  --muted: var(--brand-blue-deep);
   --line: rgba(20, 85, 232, 0.16);
   --shadow-soft: 0 18px 45px rgba(18, 61, 184, 0.1);
   --shadow-card: 0 20px 50px rgba(18, 61, 184, 0.12);
-  --color-087ecb: #087ecb;
-  --color-0d5b92: #0d5b92;
-  --color-104bbd: #104bbd; /*.timeline-page .link-container a */
-  --color-13aebe: #13aebe;
-  --color-16227f: #16227f;
-  --color-1766f4: #1766f4;
-  --color-201c30: #201c30;
-  --color-283449: #283449;
-  --color-303c4d: #303c4d;
-  --color-52c4e8: #52c4e8;
-  --color-8bb5ff: #8bb5ff;
-  --color-8bdcf0: #8bdcf0;
-  --color-a8e8f3: #a8e8f3;
-  --color-b9e9f5: #b9e9f5;
-  --color-dceaff: #dceaff;
-  --color-ddd: #ddd;
-  --color-e9fbff: #e9fbff;
-  --color-edf5ff: #edf5ff;
-  --color-f2bb06: #f2bb06;
-  --color-f7efe4: #f7efe4;
-  --color-f7faff: #f7faff;
   --color-white: #fff;
 }
 
@@ -42,7 +20,7 @@ body {
   color: var(--text);
   background:
     radial-gradient(circle at top, rgba(19, 200, 213, 0.1), transparent 34%),
-    linear-gradient(180deg, var(--color-f7faff) 0%, var(--panel-soft) 100%);
+    linear-gradient(180deg, var(--color-white) 0%, var(--panel-soft) 100%);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -52,7 +30,7 @@ body {
   z-index: 9;
   max-width: 1180px;
   background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(29, 36, 48, 0.08);
+  border: 1px solid rgba(23, 38, 64, 0.08);
   border-radius: 28px;
   box-shadow: var(--shadow-soft);
   padding: 2rem 2rem 3rem;
@@ -78,7 +56,7 @@ body {
     rgba(20, 85, 232, 0.08),
     rgba(19, 200, 213, 0.12)
   );
-  border-left: 4px solid var(--brand-ocean);
+  border-left: 4px solid var(--brand-blue);
   border-radius: 10px;
   align-content: center;
 }
@@ -86,7 +64,7 @@ body {
 /* No data message styles */
 .no-data-message {
   background-color: var(--panel-soft);
-  border: 1px solid var(--color-8bb5ff);
+  border: 1px solid var(--panel-soft);
   border-radius: 6px;
   padding: 16px;
   margin: 16px 0;
@@ -98,7 +76,7 @@ body {
 /* Copyright message styles */
 .copyright-text {
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--brand-blue-deep);
   margin-top: 1rem;
   font-weight: 700;
   text-align: center;
@@ -111,7 +89,7 @@ body {
 
 /* Image and figure styles */
 figcaption {
-  color: black;
+  color: var(--text);
   font-weight: bold;
 }
 
@@ -124,14 +102,14 @@ figcaption {
 .centered-figure img {
   max-width: 100%;
   height: auto;
-  border: 1px solid var(--color-ddd);
+  border: 1px solid var(--panel-soft);
   border-radius: 4px;
 }
 
 .image-col img {
   max-width: 100%;
   height: auto;
-  border: 1px solid var(--color-ddd);
+  border: 1px solid var(--panel-soft);
   border-radius: 4px;
 }
 
@@ -140,7 +118,7 @@ figcaption {
   margin: 1.2rem 0;
   padding: 1rem 1.1rem;
   border: 1px solid rgba(20, 85, 232, 0.16);
-  border-left: 4px solid var(--brand-ocean);
+  border-left: 4px solid var(--brand-blue);
   border-radius: 14px;
   width: fit-content;
   max-width: 100%;
@@ -155,7 +133,7 @@ figcaption {
 .link-container a {
   display: block;
   margin: 0.5rem 0;
-  color: var(--color-0d5b92);
+  color: var(--brand-blue-deep);
   text-decoration: none;
   font-size: 0.96rem;
   font-weight: 600;
@@ -199,7 +177,7 @@ figcaption {
   width: 250px;
   background: linear-gradient(
     160deg,
-    var(--color-1766f4) 0%,
+    var(--brand-blue) 0%,
     var(--brand-blue-deep) 100%
   );
   color: var(--brand-blue);
@@ -243,7 +221,7 @@ f8f4
 }
 /* Sidebar accordion arrows */
 .sidebar .accordion-button::before {
-  color: var(--color-16227f);
+  color: var(--text);
 }
 
 /* Arrow rotates when open but not needed now, arrow changes colour on hover -
@@ -286,9 +264,9 @@ f8f4
   background: linear-gradient(
     90deg,
     var(--brand-blue-deep) 0%,
-    var(--color-303c4d) 100%
+    var(--text) 100%
   ) !important;
-  color: var(--color-f7efe4) !important;
+  color: var(--panel-soft) !important;
   border-radius: 12px !important;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -298,7 +276,7 @@ f8f4
 .sidebar .accordion-button:hover {
   background: linear-gradient(
     90deg,
-    var(--color-00aebd) 0%,
+    var(--brand-cyan) 0%,
     var(--brand-cyan) 100%
   ) !important;
   color: var(--brand-blue) !important;
@@ -308,8 +286,8 @@ f8f4
 .sidebar .accordion-button:not(.collapsed) {
   background: linear-gradient(
     90deg,
-    var(--color-dceaff) 0%,
-    var(--color-b9e9f5) 100%
+    var(--panel-soft) 0%,
+    var(--panel-soft) 100%
   ) !important;
   color: var(--brand-blue) !important;
 }
@@ -398,7 +376,7 @@ f8f4
 
 .card {
   width: 85%;
-  border: 1px solid rgba(127, 22, 41, 0.12);
+  border: 1px solid rgba(23, 38, 64, 0.12);
   border-radius: 28px;
   box-shadow: var(--shadow-card);
   overflow: hidden;
@@ -406,7 +384,7 @@ f8f4
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.94),
-    rgba(247, 242, 232, 0.9)
+    rgba(234, 242, 255, 0.9)
   );
   position: relative;
   isolation: isolate;
@@ -431,7 +409,7 @@ f8f4
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.35),
-    rgba(245, 239, 229, 0.7)
+    rgba(234, 242, 255, 0.7)
   );
   padding: 1.8rem 1.5rem 1.6rem;
   border-radius: 0 0 28px 28px;
@@ -507,7 +485,7 @@ f8f4
 .scroll-arrow:hover {
   background: linear-gradient(
     135deg,
-    var(--color-dceaff) 0%,
+    var(--panel-soft) 0%,
     var(--brand-cyan) 100%
   );
   color: var(--brand-blue-deep);
@@ -548,11 +526,11 @@ f8f4
 
 /* navbar brand style */
 .navbar-brand {
-  color: var(--color-f7efe4);
+  color: var(--panel-soft);
   background: linear-gradient(
     90deg,
-    var(--brand-ocean) 0%,
-    var(--color-13aebe) 100%
+    var(--brand-blue) 0%,
+    var(--brand-cyan) 100%
   );
   font-size: 1.15rem;
   font-weight: 700;
@@ -565,11 +543,11 @@ f8f4
 }
 
 .navbar-brand:hover {
-  color: var(--color-fff);
+  color: var(--color-white);
   background: linear-gradient(
     90deg,
-    var(--color-13aebe) 0%,
-    var(--brand-ocean) 100%
+    var(--brand-cyan) 0%,
+    var(--brand-blue) 100%
   );
   font-size: 1.15rem;
   display: flex;
@@ -628,7 +606,7 @@ body {
   color: var(--text);
   background:
     radial-gradient(circle at top, rgba(19, 200, 213, 0.1), transparent 34%),
-    linear-gradient(180deg, var(--color-f7faff) 0%, var(--panel-soft) 100%);
+    linear-gradient(180deg, var(--color-white) 0%, var(--panel-soft) 100%);
 }
 
 .container {
@@ -640,9 +618,9 @@ body {
 .sidebar {
   background: linear-gradient(
     160deg,
-    var(--color-1766f4) 0%,
+    var(--brand-blue) 0%,
     var(--brand-blue-deep) 100%
-  );a8e8f3
+  );
   color: var(--color-white);
   border-right: 4px solid var(--brand-cyan);
 }
@@ -650,8 +628,8 @@ body {
 .sidebar .accordion-button {
   background: linear-gradient(
     110deg,
-    var(--color-#104bbd),
-    var(--color-#087ecb)
+    var(--brand-blue-deep),
+    var(--brand-blue)
   ) !important;
   color: var(--color-white) !important;
 }
@@ -659,7 +637,7 @@ body {
 .sidebar .accordion-button:hover {
   background: linear-gradient(
     110deg,
-    var(--color-00aebd),
+    var(--brand-cyan),
     var(--brand-cyan)
   ) !important;
   color: var(--text) !important;
@@ -668,14 +646,14 @@ body {
 .sidebar .accordion-button:not(.collapsed) {
   background: linear-gradient(
     110deg,
-    var(--color-dceaff),
-    var(--color-b9e9f5)
+    var(--panel-soft),
+    var(--panel-soft)
   ) !important;
   color: var(--text) !important;
 }
 
 .sidebar .accordion-body {
-  background: rgba(7, 39, 124, 0.52) !important;
+  background: rgba(23, 38, 64, 0.52) !important;
 }
 
 .sidebar .nav-link {
@@ -693,7 +671,7 @@ body {
   background: linear-gradient(
     180deg,
     var(--color-white) 0%,
-    var(--color-f7efe4) 100%
+    var(--panel-soft) 100%
   );
   box-shadow: var(--shadow-card);
 }
@@ -711,7 +689,7 @@ body {
   background: linear-gradient(
     180deg,
     var(--color-white) 0%,
-    var(--color-edf5ff) 100%
+    var(--panel-soft) 100%
   );
 }
 
@@ -728,11 +706,11 @@ body {
 
 .link-container {
   border-color: var(--line);
-  border-left-color: var(--brand-ocean);
+  border-left-color: var(--brand-blue);
   background: linear-gradient(
     180deg,
     var(--color-white) 0%,
-    var(--color-f7efe4;) 100%
+    var(--panel-soft) 100%
   );
 }
 
@@ -760,7 +738,7 @@ a:hover {
   background: linear-gradient(
     135deg,
     var(--brand-cyan) 0%,
-    var(--color-a8e8f3) 100%
+    var(--panel-soft) 100%
   );
   color: var(--brand-blue-deep);
 }
@@ -778,7 +756,7 @@ a:hover {
   background: linear-gradient(
     90deg,
     var(--brand-blue) 0%,
-    var(--color-f2bb06) 100%
+    var(--panel-soft) 100%
   );
   color: var(--color-white);
 }
@@ -786,7 +764,7 @@ a:hover {
 .navbar-brand:hover {
   background: linear-gradient(
     90deg,
-    var(--color-f2bb06) 0%,
+    var(--panel-soft) 0%,
     var(--brand-blue) 100%
   );
   color: var(--color-white);
@@ -814,7 +792,7 @@ a:hover {
 .no-data-message {
   color: var(--brand-blue-deep);
   background: var(--panel-soft);
-  border-color: var(--color-8bb5ff);
+  border-color: var(--panel-soft);
 }
 
 :focus-visible {
