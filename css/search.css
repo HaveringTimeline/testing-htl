@@ -68,7 +68,7 @@ body {
 .search-page .search-sidebar {
   width: 30%;
   padding: 16px;
-  background: linear-gradient(160deg, var(--panel-soft) 0%, var(--color-f8fbff) 100%);
+  background: linear-gradient(160deg, var(--panel-soft) 0%, var(--color-white) 100%);
   border: 1px solid rgba(20, 85, 232, 0.2);
   border-radius: 8px;
 
