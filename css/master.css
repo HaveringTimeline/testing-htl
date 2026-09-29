@@ -28,13 +28,8 @@
   --color-e9fbff: #e9fbff;
   --color-edf5ff: #edf5ff;
   --color-f2bb06: #f2bb06;
-  --color-f2f7ff: #f2f7ff;
   --color-f7efe4: #f7efe4;
   --color-f7faff: #f7faff;
-  --color-f8f4ef: #f8f4ef;
-  --color-f8fbff: #f8fbff;
-  --color-fff9f5: #fff9f5;
-  --color-fffef9: #fffef9;
   --color-white: #fff;
 }
 
@@ -241,7 +236,7 @@ figcaption {
   color: var(--brand-blue) !important;
   font-weight: 800 !important;
   background-color: var(--panel-soft) !important;
-
+f8f4
   .accordion-button:focus {
     box-shadow: none !important;
   }
@@ -293,7 +288,7 @@ figcaption {
     var(--brand-blue-deep) 0%,
     var(--color-303c4d) 100%
   ) !important;
-  color: var(--color-f8f4ef) !important;
+  color: var(--color-f7efe4) !important;
   border-radius: 12px !important;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -570,7 +565,7 @@ figcaption {
 }
 
 .navbar-brand:hover {
-  color: var(--color-fff9f5);
+  color: var(--color-fff);
   background: linear-gradient(
     90deg,
     var(--color-13aebe) 0%,
@@ -698,7 +693,7 @@ body {
   background: linear-gradient(
     180deg,
     var(--color-white) 0%,
-    var(--color-f2f7ff) 100%
+    var(--color-f7efe4) 100%
   );
   box-shadow: var(--shadow-card);
 }
@@ -737,7 +732,7 @@ body {
   background: linear-gradient(
     180deg,
     var(--color-white) 0%,
-    var(--color-f2f7ff) 100%
+    var(--color-f7efe4;) 100%
   );
 }
 
