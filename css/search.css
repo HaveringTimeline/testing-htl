@@ -4,7 +4,7 @@
 .search-results {
   border: 1px solid rgba(20, 85, 232, 0.2);
   border-radius: 8px;
-  background: #fff;
+  background: var(--color-white);
 }
 html,
 body {
@@ -30,8 +30,8 @@ body {
 .match-dropdown {
   margin: 12px 0;
   padding: 12px;
-  background: #eaf2ff;
-  border: 2px solid #1455e8;
+  background: var(--panel-soft);
+  border: 2px solid var(--brand-blue);
   border-radius: 8px;
 }
 
@@ -68,7 +68,7 @@ body {
 .search-page .search-sidebar {
   width: 30%;
   padding: 16px;
-  background: linear-gradient(160deg, #eaf2ff 0%, #f8fbff 100%);
+  background: linear-gradient(160deg, var(--panel-soft) 0%, var(--color-f8fbff) 100%);
   border: 1px solid rgba(20, 85, 232, 0.2);
   border-radius: 8px;
 
@@ -103,7 +103,7 @@ body {
   text-align: center;
   text-decoration: underline;
   margin-bottom: 30px;
-  color: #1455e8;
+  color: var(--brand-blue);
 }
 
 /* Optional: smoother touch behaviour */

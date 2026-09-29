@@ -1,7 +1,7 @@
 .indexpage {
   margin: 0;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg, #f7faff 0%, #eaf2ff 100%);
+  background: linear-gradient(180deg, var(--color-f7faff) 0%, var(--panel-soft) 100%);
   width: 100%;
   min-height: 100vh;
   padding-bottom: 4rem;
@@ -18,21 +18,21 @@
 .indexpage p,
 .indexpage li,
 .indexpage a {
-  color: #172640;
+  color: var(--text);
   font-size: 1rem;
   line-height: 1.7;
 }
 
 .indexpage h1 {
   font-size: clamp(2.2rem, 3vw, 3rem) !important;
-  color: #1455e8 !important;
+  color: var(--brand-blue) !important;
   font-weight: 700 !important;
   margin-bottom: 0.75rem;
 }
 
 .indexpage h2 {
   font-size: clamp(1.8rem, 2.3vw, 2.5rem) !important;
-  color: #1455e8 !important;
+  color: var(--brand-blue) !important;
   font-weight: 700 !important;
   text-align: left;
   text-decoration: none;
@@ -42,14 +42,14 @@
 
 .indexpage h3 {
   font-size: 1.5rem !important;
-  color: #1455e8 !important;
+  color: var(--brand-blue) !important;
   font-weight: 700 !important;
   text-decoration: none;
 }
 
 .indexpage h4 {
   font-size: 1.2rem !important;
-  color: #1455e8 !important;
+  color: var(--brand-blue) !important;
   font-weight: 700 !important;
 }
 
@@ -61,15 +61,15 @@
 
 .indexpage strong,
 .indexpage b {
-  color: #123db8;
+  color: var(--brand-blue-deep);
 }
 
 .indexpage a {
-  color: #1455e8;
+  color: var(--brand-blue);
   text-decoration: none;
 }
 
 .indexpage a:hover {
-  color: #123db8;
+  color: var(--brand-blue-deep);
   text-decoration: underline;
 }
